@@ -1,0 +1,19 @@
+<ion-header-bar class="bar-stable">
+	<h1 class="title">Request {{request.id}}</h1>
+</ion-header-bar>
+<ion-content>
+	<ion-item >
+		<h1>{{request.building+item.apartment}}</h1>
+		<h3>{{request.dateTime | date : medium}}</h3>
+		<h3> Status : {{request.status}}</h3>
+		<p> Resident : {{request.firstName}} {{request.lastName}}</p>
+		<p> Email : {{request.email}}</p>
+		<p> Home Phone : {{request.homePhone}}</p>
+		<p> Mobile Phone : {{request.mobilePhone}}</p>
+		<br>
+		<h3>Message : </h3>
+		<br>
+		<h3 ng-bind="request.message"></h3>
+	<button ui-sref="listRequests">Back</button>
+	<button ng-click="toggleStatus()">Toggle Status</button>
+</ion-content>
