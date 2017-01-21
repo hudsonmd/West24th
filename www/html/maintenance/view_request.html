@@ -13,7 +13,10 @@
 		<br>
 		<h3>Message : </h3>
 		<br>
-		<h3 ng-bind="request.message"></h3>
+		<div class="item-text-wrap">{{request.message}}</div>
+	</ion-item>
+</ion-content>
+<ion-footer-bar>
 	<button ui-sref="listRequests">Back</button>
 	<button ng-click="toggleStatus()">Toggle Status</button>
-</ion-content>
+</ion-footer-bar>
