@@ -2,9 +2,9 @@
 	<h1 class="title">List Requests</h1>
 </ion-header-bar>
 <ion-content>
-	<ion-item ng-repeat="request in requests | orderBy : dateTime" ng-click="goTo(request)">
+	<ion-item ng-repeat="request in requests | orderBy : 'dateTime' : true | orderBy : 'status' : true" ng-click="goTo(request)">
 		<h1>{{request.building+request.apartment}} (<b>{{request.status}})</h1>
 		<p ng-bind="request.message | limitTo : 50"></p>
-		<h3>Submitted : {{request.dateTime | date : medium}} (id : {{request.id}})</h3>
+		<h3>Submitted : {{request.dateTime | date : 'MMM dd h:mm'}} (id : {{request.id}})</h3>
 	</ion-item>
 </ion-content>
