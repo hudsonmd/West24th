@@ -4,7 +4,7 @@
 <ion-content>
 	<ion-item >
 		<h1>{{request.building+request.apartment}}</h1>
-		<h3>{{request.dateTime | date : medium}}</h3>
+		<h3>{{request.dateTime | date : 'MMM dd h:mm'}}</h3>
 		<h3> Status : {{request.status}}</h3>
 		<p> Resident : {{request.firstName}} {{request.lastName}}</p>
 		<p> Email : {{request.email}}</p>

@@ -4,7 +4,7 @@
 <ion-content>
 	<ion-item ng-repeat="request in requests | orderBy : 'dateTime' : true | orderBy : 'status' : true" ng-click="goTo(request)">
 		<h1>{{request.building+request.apartment}} (<b>{{request.status}})</h1>
-		<p ng-bind="request.message | limitTo : 50"></p>
+		<p ng-bind="request.message"></p>
 		<h3>Submitted : {{request.dateTime | date : 'MMM dd h:mm'}} (id : {{request.id}})</h3>
 	</ion-item>
 </ion-content>
